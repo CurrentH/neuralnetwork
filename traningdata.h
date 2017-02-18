@@ -2,21 +2,27 @@
 #define TRANINGDATA_H
 
 #include <vector>
-#include <cstdlib>
+#include <string>
 #include <fstream>
 #include <sstream>
 
-class TrainingData
+class trainingData
 {
     public:
         //  Public methods
-        TrainingData( const std::string filename );
+        trainingData( const std::string filename );
         bool isEof( void );
         void getTopology( std::vector<unsigned> &topology );
 
         // Returns the number of input values read from the file:
         unsigned getNextInputs( std::vector<double> &inputVals );
         unsigned getTargetOutputs( std::vector<double> &targetOutputVals );
+
+    public:
+		//  Public attributes
+
+    private:
+		//  Private methods
 
     private:
         //  Private attributes

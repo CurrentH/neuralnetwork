@@ -3,8 +3,8 @@
 
 #include <vector>
 #include <iostream>
-#include <cassert>
-#include <cmath>
+#include <assert.h>
+#include <math.h>
 
 #include "connections.h"
 
@@ -21,6 +21,8 @@ class neuron
             void calculateOutputGradients( double targetVal );
             void calculateHiddenGradients( const layer &nextLayer );
             void updateInputWeights( layer &prevLayer );
+    public:
+		//  Public attributes
 
     private:
         //  Private methods
@@ -30,12 +32,13 @@ class neuron
 
     private:
         //  Private attributes
-            static double eta;      //  [0.0..1.0] overall net training rate
-            static double alpha;    //  [0.0..n] multiplier of last weight change (momentum)
-            double m_outputVal;
-            std::vector< connections > m_outputWeights;
-            unsigned m_myIndex;
+            static double eta = 0.1;      //  [0.0..1.0] overall net training rate
+            static double alpha = 0.5;    //  [0.0..n] multiplier of last weight change (momentum)
             double m_gradient;
+            double m_outputVal;
+            unsigned m_myIndex;
+            std::vector< connections > m_outputWeights;
+
 };
 
 #endif // NEURON_H

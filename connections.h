@@ -13,10 +13,14 @@ class connections
         void setDeltaWeight( double newDeltaWeight );
         void setWeight( void );
 
+    public:
+        //  Public attributes
+
     private:
         //  Private methods
         static double randomWeight( void );
 
+    private:
         //  Private attributes
         double weight;
         double deltaWeight;

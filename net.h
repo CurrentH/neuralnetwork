@@ -15,13 +15,18 @@ class net
         void getResults( std::vector<double> &resultVals ) const;
         double getRecentAverageError(void) const;
 
+    public:
+		//  Public Attributes
+
+    private:
+		//	Private methods
+
     private:
         //  Private attributes
         std::vector<layer> m_layers;   // m_layers[layerNum][neuronNum]
         double m_error;
         double m_recentAverageError;
-        static double m_recentAverageSmoothingFactor;
-
+        static double m_recentAverageSmoothingFactor = 100.0; // Number of training samples to average over
 };
 
 #endif // NET_H

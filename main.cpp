@@ -1,5 +1,5 @@
-#include "include/net.h"
-#include "include/TraningData.h"
+#include "net.h"
+#include "traningdata.h"
 
 void showVectorVals(std::string label, std::vector<double> &v)
 {
@@ -13,7 +13,7 @@ void showVectorVals(std::string label, std::vector<double> &v)
 
 int main()
 {
-    TrainingData trainData("trainingData.txt");
+    trainingData trainData("trainingData.txt");
 
     std::vector<unsigned> topology;
     trainData.getTopology( topology );
