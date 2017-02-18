@@ -14,7 +14,7 @@ void trainingData::getTopology( std::vector<unsigned> &topology )
 {
     std::string line;
     std::string label;
-
+/*
     getline( m_trainingDataFile, line );
     std::stringstream ss( line );
     ss >> label;
@@ -30,8 +30,15 @@ void trainingData::getTopology( std::vector<unsigned> &topology )
         ss >> n;
         topology.push_back(n);
     }
+*/
+	topology.push_back(2);
+	topology.push_back(2);
+    topology.push_back(1);
 
-    return;
+    //	0.000117293 2	(.5 .1)
+    //	0.000181584 5
+    //	0.000199707 2
+    //	0.00040973  2 2 2 2 2
 }
 
 unsigned trainingData::getNextInputs( std::vector<double> &inputVals )

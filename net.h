@@ -26,7 +26,7 @@ class net
         std::vector<layer> m_layers;   // m_layers[layerNum][neuronNum]
         double m_error;
         double m_recentAverageError;
-        static double m_recentAverageSmoothingFactor = 100.0; // Number of training samples to average over
+        const double m_recentAverageSmoothingFactor = 100.0; // Number of training samples to average over
 };
 
 #endif // NET_H
